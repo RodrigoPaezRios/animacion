@@ -1,0 +1,161 @@
+body{
+    min-height: 100vh;
+    background-color:gray;
+    background-size: cover;
+    margin: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.icono{
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    transition: transform 2s ease;
+    cursor: pointer;
+}
+
+#settings{
+    background-color: rgb(71, 64, 64);
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    animation: slideMenu 0.5s ease;
+}
+
+#settings.active{
+    left: 0;
+}
+
+#settings .menu{
+    width: 100%;
+    margin-top: 80px;
+}
+
+#settings .menu .items{
+    position: relative;
+    cursor: pointer;
+}
+
+
+.icono:hover{
+    transform: rotate(360deg);
+}
+
+
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: space-between; /* Espacio entre el contenido y los botones */
+}
+
+.container {
+    /* Estilos para el contenido principal si es necesario */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    cursor: pointer;
+}
+
+button {
+    font-size: medium;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 250px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: orange;
+}
+
+ul{
+    list-style: none;
+}
+
+#menu{
+    animation: transition 1s ease;
+}
+
+#close-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+
+#menu-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+#Caja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+}
+.array-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes slideMenuOn {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateX(-20px);
+    }
+}
+.array-element {
+    font-size: larger;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    animation: slideMenuOn 0.8s ease;
+}
+
+@keyframes slideMenu {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
